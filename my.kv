@@ -129,18 +129,9 @@
                 root.manager.transition.direction = "right"
                 root.createBtn()
 
-<TestWindow>:
-    name: "quiz"
-
+<Window>:
+    name: "test"
     FloatLayout:
-        Label:
-            id: n
-            pos_hint:{"x": 0.1, "top":0.9}
-            size_hint:0.8, 0.2
-            font_size: 40
-            text: "Let's start, Bro"
-    
-
 
 <MainWindow>:
     n: n
@@ -171,12 +162,12 @@
             size_hint:0.6,0.2
             text: "Log Out"
             on_release:
-                app.root.current = "login"
+                app.root.current = "test"
                 root.manager.transition.direction = "down"
         Button:
             pos_hint:{"x":0.2, "y": 0.1}
             size_hint:0.6,0.2
             text: "Begin"
             on_release:
-                app.root.current = "quiz"
+                app.root.current = "test"
                 root.manager.transition.direction = "down"
